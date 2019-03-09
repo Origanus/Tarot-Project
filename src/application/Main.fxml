@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--  
+	This file is a View design for the Main window to present options to the users.
+	@author: 	Origanus Ramfate
+	@version: 	2 (Revised: Collection in Java Final Project)
+-->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <center>
+      <Pane prefHeight="500.0" prefWidth="338.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="coverImage" fitHeight="348.0" fitWidth="200.0" layoutX="69.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor></ImageView>
+            <Label fx:id="lblMessage" layoutX="104.0" layoutY="439.0" prefHeight="35.0" prefWidth="127.0" text="Cards ReShuffled" textFill="#02304f" visible="false">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+            </Label>
+         </children></Pane>
+   </center>
+   <right>
+      <VBox prefHeight="500.0" prefWidth="262.0" style="-fx-background-color: GREY;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="179.0" prefWidth="162.0" text="Press Reading to get a tarot reading, ReShuffle to shuffle the deck, Deck to view the whole deck and Search to search for a card" textFill="WHITE" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <effect>
+                  <DropShadow color="#02304f" height="4.32" offsetX="1.0" offsetY="1.1" radius="3.4475000000000002" width="11.47" />
+               </effect>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnReading" mnemonicParsing="false" onAction="#getReading" prefHeight="35.0" prefWidth="185.0" text="Reading">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnReShuffle" mnemonicParsing="false" onAction="#getReShuffle" prefHeight="35.0" prefWidth="183.0" text="ReShuffle">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnDeck" mnemonicParsing="false" onAction="#getDeck" prefHeight="35.0" prefWidth="189.0" text="Deck">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#getSearch" prefHeight="35.0" prefWidth="184.0" text="Search" />
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

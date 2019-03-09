@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--  
+	This file is a View design for the Deck window to present a selected group of deck.
+	@author: 	Origanus Ramfate
+	@version: 	2 (Revised: Collection in Java Final Project)
+-->
+
+<BorderPane prefHeight="700.0" prefWidth="944.0" style="-fx-background-color: GREY;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DeckController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="680.0" prefWidth="660.0" style="-fx-border-radius: 10;" BorderPane.alignment="CENTER">
+         <content>
+            <GridPane fx:id="gpCards" alignment="CENTER" hgap="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1114.0" prefWidth="667.0" vgap="10.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="NEVER" minWidth="200.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="NEVER" minWidth="200.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="NEVER" minWidth="200.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="348.0" prefHeight="348.0" vgrow="NEVER" />
+                <RowConstraints minHeight="348.0" prefHeight="348.0" vgrow="NEVER" />
+                <RowConstraints minHeight="348.0" prefHeight="348.0" vgrow="NEVER" />
+              </rowConstraints>
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <left>
+      <VBox prefHeight="680.0" prefWidth="234.0" style="-fx-background-color: GRAY;" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="lvSuits" prefHeight="240.0" prefWidth="218.0" style="-fx-border-radius: 10;" VBox.vgrow="NEVER">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ListView>
+            <TextField fx:id="tfIndex" editable="false" prefHeight="35.0" prefWidth="300.0" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfName" editable="false" prefHeight="35.0" prefWidth="300.0" VBox.vgrow="NEVER">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="taNotes" editable="false" prefHeight="363.0" prefWidth="234.0" wrapText="true" VBox.vgrow="NEVER">
+               <font>
+                  <Font size="14.0" />
+               </font></TextArea>
+         </children>
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+</BorderPane>
